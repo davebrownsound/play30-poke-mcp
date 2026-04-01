@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: poke-recipe-gdrive
+    name: play30-poke-mcp
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: python src/server.py
