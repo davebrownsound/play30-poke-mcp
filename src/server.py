@@ -42,6 +42,7 @@ auth = GoogleProvider(
     base_url=PUBLIC_BASE_URL,
     redirect_path="/auth/callback",
     valid_scopes=SCOPES,
+    required_scopes=SCOPES,
     extra_authorize_params={
         "access_type": "offline",
         "prompt": "consent",
