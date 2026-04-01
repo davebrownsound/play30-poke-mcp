@@ -17,6 +17,7 @@ from fastmcp.server.auth.providers.google import GoogleProvider
 from fastmcp.server.dependencies import CurrentAccessToken
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
+from storage import FileKeyValue
 
 load_dotenv()
 
@@ -43,6 +44,7 @@ auth = GoogleProvider(
     redirect_path="/auth/callback",
     valid_scopes=SCOPES,
     required_scopes=SCOPES,
+    client_storage=FileKeyValue(),
     extra_authorize_params={
         "access_type": "offline",
         "prompt": "consent",
